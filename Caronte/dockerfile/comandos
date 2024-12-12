@@ -1,0 +1,10 @@
+
+docker build -t raulcalin15/miubuntu -f Dockerfile1 .  
+docker run -v ./datos:/root/datos --name miservidor -e USUARIO=esther -e PASSWORD=esther morgadoberruezo/miubuntu 
+
+
+docker-compose --env-file .env -f docker-compose.yml up -d --build
+docker compose --env-file .env -f docker-compose.yml config
+docker compose --env-file .env -f docker-compose.yml down
+docker-compose --env-file .env -f docker-compose.yml down
+ssh alfonso@172.120.10.2 -p 22
