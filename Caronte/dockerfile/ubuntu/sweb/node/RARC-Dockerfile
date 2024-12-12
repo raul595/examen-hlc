@@ -2,5 +2,10 @@ ARG AUTOR
 FROM ${AUTOR}/ubuntubase
 
 RUN apt-get update && apt-install -y curl gnupg software-properties-common
-RUN curl -f sSL 
+RUN curl -f sSL https://deb.nodesource.com/setup_18.x | bash -
+RUN apt-get install -y nodejs
+RUN node --version && npm --version
+EXPOSE 3000
 USER ROOT
+WORKDIR /root/admin
+ENTRYPOINT ["/root/admin/nginx/start.sh"]
