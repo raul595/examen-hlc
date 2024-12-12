@@ -8,4 +8,4 @@ RUN node --version && npm --version
 EXPOSE 3000
 USER ROOT
 WORKDIR /root/admin
-ENTRYPOINT ["/root/admin/nginx/start.sh"]
+ENTRYPOINT ["/root/admin/nginx/racr-start.sh"]

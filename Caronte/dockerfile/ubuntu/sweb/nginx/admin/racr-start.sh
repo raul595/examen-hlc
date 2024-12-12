@@ -6,7 +6,7 @@ config_nginx(){
     nginx
 }
 load_entrypoint(){
-    /root/admin/start.sh
+    /root/admin/racr-start.sh
 }
 
 main(){

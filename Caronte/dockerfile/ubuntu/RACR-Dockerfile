@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM racr-ubuntu:24.04
 ENV USUARIO="pepe"
 ENV PASSWORD="abc"
 # ENV CONTEXTO=${CONTEXTO}
